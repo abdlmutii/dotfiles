@@ -1,0 +1,52 @@
+local present, null_ls = pcall(require, "null-ls")
+
+if not present then
+  return
+end
+
+local b = null_ls.builtins
+
+local with_diagnostics_code = function(builtin)
+  return builtin.with {
+    diagnostics_format = "#{m} [#{c}]",
+  }
+end
+
+local with_root_file = function(builtin, file)
+  return builtin.with {
+    condition = function(utils)
+      return utils.root_has_file(file)
+    end,
+  }
+end
+
+local sources = {
+  -- formatting
+  b.formatting.prettierd.with { filetypes = { "vue", "css", "scss", "less", "html", "json", "jsonc", "markdown", "typescript", "typescriptreact", "javascript", "javascriptreact"  } },
+  b.formatting.golines,
+  b.formatting.goimports,
+  b.formatting.beautysh.with { filetypes = { "zsh", "sh" } },
+  b.formatting.fixjson,
+  b.formatting.stylua,
+  
+  -- diagnostics
+  b.diagnostics.write_good,
+  b.diagnostics.shellcheck,
+
+  -- code actions
+  b.code_actions.eslint
+}
+
+null_ls.setup({
+      debug = false,
+      sources = sources,
+      on_attach = function(_, clientId)
+          if vim.lsp.buf_attach_client(0, clientId) == true then
+                vim.api.nvim_create_autocmd("BufWritePost", {
+                    callback = function()
+                        vim.lsp.buf.format()
+                    end,
+                })
+          end
+      end,
+})
