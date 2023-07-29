@@ -28,6 +28,12 @@ local plugins = {
     }
   },
   {
+    "pmizio/typescript-tools.nvim",
+    ft = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    opts = {},
+  },
+  
+  {
   "kevinhwang91/nvim-ufo",
   dependencies = {
     "kevinhwang91/promise-async",
@@ -185,6 +191,14 @@ local plugins = {
         "html_lsp",
         "emmet-ls"
       },
+    },
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = {
+      experimental = {
+        ghost_text = true,
+      }
     },
   },
   {
