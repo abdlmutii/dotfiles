@@ -32,7 +32,6 @@ local plugins = {
     ft = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
     opts = {},
   },
-  
   {
   "kevinhwang91/nvim-ufo",
   dependencies = {
@@ -56,7 +55,7 @@ local plugins = {
       offset = -2,
       foldsigns = {
         open = "⌄", -- mark the beginning of a fold
-        close = "˃", -- show a closed fold
+        close = ">", -- show a closed fold
         seps = { "", "" }, -- open fold middle marker
       },
     }
@@ -114,15 +113,6 @@ local plugins = {
         large_file_overrides = nil,
         min_count_to_highlight = 1,
       })
-    end,
-  },
-  {
-    "Pocco81/auto-save.nvim",
-    event = "BufReadPost",
-    config = function()
-      require("auto-save").setup {
-        enabled = true
-      }
     end,
   },
   {
@@ -194,12 +184,66 @@ local plugins = {
     },
   },
   {
+    'folke/trouble.nvim',
+    cmd = 'Trouble',
+    opts = {},
+  },
+  { 'nvim-focus/focus.nvim', version = '*' },
+  {
+    "fgheng/winbar.nvim",
+    config = function () 
+    require('winbar').setup({
+    enabled = true,
+
+    show_file_path = true,
+    show_symbols = true,
+
+   -- colors = {
+     --  path = '', 
+     --   file_name = '',
+     --   symbols = '',
+   -- },
+
+    icons = {
+     --  file_icon_default = '',
+        seperator = '>',
+     --   editor_state = '●',
+     --   lock_icon = '',
+    },
+
+    exclude_filetype = {
+        'help',
+        'startify',
+        'dashboard',
+        'packer',
+        'neogitstatus',
+        'NvimTree',
+        'Trouble',
+        'alpha',
+        'lir',
+        'Outline',
+        'spectre_panel',
+        'toggleterm',
+        'qf',
+    }
+})
+    end,
+  },
+  {
     "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-emoji",
+      { "jcdickinson/codeium.nvim", config = true }
+    },
     opts = {
       experimental = {
         ghost_text = true,
       }
     },
+    sources = {
+      { name = "codeium" }
+    }
   },
   {
     "ray-x/go.nvim",
@@ -215,6 +259,15 @@ local plugins = {
     ft = { "go", "gomod" },
     build = ':lua require("go.install").update_all_sync()',
   },
+  {
+    "NvChad/nvim-colorizer.lua",
+    opts = {
+    user_default_options = {
+    names = false,
+    RRGGBBAA = true,
+      },
+    }
+  }
 }
 
 return plugins
