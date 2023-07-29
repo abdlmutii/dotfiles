@@ -6,7 +6,7 @@ local highlights = require "custom.highlights"
 
 M.ui = {
  -- the theme, toggle transparent background, 
- theme = "radium",
+ theme = "nightowl",
  -- transparency = true,
 
  -- statusline
