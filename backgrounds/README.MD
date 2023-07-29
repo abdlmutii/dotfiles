@@ -1,4 +1,6 @@
 ## Backgrounds
-If you are using termux-monet, you can steal some images from here and put them in the next path: 
+If you are using termux-monet, you can steal some images from here, then enter the next cmd:
+<br>
 `upload ~/.termux/background.jpeg`
+<br>
 it will prompt you to enter the image you want. then enter it and restart termux. and here here you go 👏
