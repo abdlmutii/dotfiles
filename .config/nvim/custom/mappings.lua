@@ -27,6 +27,8 @@ M.bookmark = {
 -- Category: Utils
 -- `Space + fm`: Formats the code
 -- `Space + rn`: Renames a file
+-- `Ctrl + V`: Paste
+-- `Ctrl + C`: Copy
 M.utils = {
   n = {
     ["<leader>fm"] = {
@@ -40,7 +42,12 @@ M.utils = {
         require("nvchad_ui.renamer").open()
         end,
       "Rename file",
-      }
+      },
+    ["<C-c>"] = {
+      ":!termux-clipboard-set<CR>",
+      "Copy text in termux"
+    },
+    ["<C-v>"] = { ":!termux-clipboard-get", "Paste text in termux"}
     },
   i = {
     ["<"] = { "<><left>", "Auto Complete" },
