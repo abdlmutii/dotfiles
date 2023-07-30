@@ -200,8 +200,10 @@ alias p9k="p10k configure"
 alias termux="cd ~/.termux && ls"
 alias upload="termux-storage-get"
 alias init="nvim ~/.config/nvim/lua/custom/init.lua"
+
 # Start neofetch on startup
 neofetch
+# node presence.js
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
