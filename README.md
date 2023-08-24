@@ -4,9 +4,10 @@ My terminal full setup.
 # Installation 
 First, Install the required apps:
 - [Termux Monet](https://github.com/HardcodedCat/termux-monet/releases/tag/v0.118.0-33) **or** [Termux](https://f-droid.org/en/packages/com.termux/)
-- [Termux:API](https://f-droid.org/en/packages/com.termux.api/)
-- [Termux:Styling](https://f-droid.org/en/packages/com.termux.styling/)
-
+- [Termux:API for termux](https://f-droid.org/en/packages/com.termux.api/) **or** [Termux:API for monet](https://github.com/HardcodedCat/termux-api/releases)
+- [Termux:Styling for termux](https://f-droid.org/en/packages/com.termux.styling/) or [Termux:Styling for monet](https://github.com/HardcodedCat/termux-styling/releases)
+> Termux-Styling isn't required, unless you want to edit the interface, i would prefer using the `color.properties` file.
+ 
 Second, run this command:
 ```
 pkg update && pkg upgrade && pkg install zsh git which fzf && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
