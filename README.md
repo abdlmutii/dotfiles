@@ -11,7 +11,7 @@ Second, run this command:
 ```
 pkg update && pkg upgrade && pkg install zsh git which fzf && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-You will be asked if you want to install packages, just press enter.
+> You will be asked if you want to install packages, just press enter.
 
 Third, Run this command to install the config:
 ```
