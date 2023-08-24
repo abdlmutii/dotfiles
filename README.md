@@ -35,5 +35,8 @@ Third, Install these lsps:
 :MasonInstall emmet_ls prettierd golines goimports gopls beautysh fixjson stylua write_good shellcheck eslint
 ```
 
+# Discord presence
+Termux doesn't allow to have discord rich presences.
+
 # Congratulations 
 You've installed the config.
