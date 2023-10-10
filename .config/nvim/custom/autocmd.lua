@@ -38,6 +38,11 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   end,
 })
 
+-- A.I 
+vim.api.nvim_create_user_command("GPT", function(args)
+  vim.api.nvim_command('silent :.!node ~/ai.js code gpt "' .. table.concat({ args }, " ") .. '"')
+end, { nargs = "*" })
+
 --[[ Discord presence
 local filename = vim.fn.expand "%:p"
 local giturl = "https://github.com/abdlnutii"
