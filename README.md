@@ -1,5 +1,5 @@
 # dotfiles
-My terminal full setup.
+My terminal full setup as a mobile dev
 
 # Installation 
 First, Install the required apps:
