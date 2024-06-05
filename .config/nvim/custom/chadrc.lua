@@ -8,13 +8,13 @@ M.ui = {
   -- the theme, toggle transparent background,
   theme = "catppuccin",
   lsp_semantic_tokens = true,
-  transparency = true,
+ -- transparency = true,
 
   -- statusline
   statusline = {
     -- set theme and make the statusline rounded
-    theme = "vscode_colored",
-    separator_style = "block",
+    theme = "default",
+    separator_style = "round",
     
     -- remove git signs ( it looks bad for me )
     overriden_modules = function(modules)
