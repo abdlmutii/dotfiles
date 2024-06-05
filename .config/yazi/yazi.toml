@@ -1,0 +1,39 @@
+[opener]
+edit = [
+	{ run = 'nvim "$@"', block = true },
+]
+show = [
+	{ run = 'n "$@"', block = true },
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open" },
+]
+play = [
+  { run = 'termux-media-player play "$@"', block = true },
+]
+##share = [
+  ##{ run = 'ngrok' }
+##}
+
+[open]
+rules = [
+	{ mime = "text/*", use = "edit" },
+	{ mime = "video/*", use = "open" },
+  
+  ## Audio 
+  { name = "*.mp3", use = "play" },
+  { name = "*.ogg", use = "play" }, 
+  { name = "*.wav", use = "play" },
+  { name = "*.m4a", use = "play" },
+
+  ## Images
+  { name = "*.png", use = [ "show", "open" ] },
+  { name = "*.jpeg", use = [ "show", "open"] },
+  { name = "*.jpg", use = [ "show", "open" ] },
+  { name = "*.webp", use = [ "show", "open"] },
+  { name = "*.gif", use = [ "show", "open"] },
+
+  ## Coding files
+  { name = "*.html", use = [ "open", "edit" ] },
+  { name = "*.ejs", use = [ "open", "edit"] },
+]
