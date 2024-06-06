@@ -141,7 +141,7 @@ se1f() {
                 '{"name": $name, "code": $code, "lang": $lang}')
 
             response=$(curl -s -X POST -H "Content-Type: application/json" -d "$payload" \
-                "https://se1f.repl.co/create")
+                "https://se1f.serveo.net/create")
 
             echo "$response"
         fi
