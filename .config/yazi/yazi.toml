@@ -1,0 +1,62 @@
+[headsup]
+disable_exec_warn = true
+
+[manager]
+sort_dir_first = true
+linemode       = "none"
+show_hidden    = true
+scrolloff      = 5
+mouse_events   = [ "click", "scroll" ]
+
+[plugin]
+prepend_previewers = [
+  { name = "*.md", run = "glow" },
+  { mime = "text/csv", run = "miller" },
+]
+
+[opener]
+edit = [
+	{ run = 'nvim "$@"', block = true },
+]
+show = [
+	{ run = 'n "$@"', block = true, desc = "Display" },
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open" },
+]
+play = [
+  { run = 'termux-media-player play "$@"', block = true, desc = "Play audio" },
+]
+share = [
+  { run = 'se1f "$@" | jq -r ".url" | xargs termux-open', block = true, desc = "Share" }
+]
+
+[open]
+rules = [
+  ## Coding files
+  { name = "*.html", use = [ "open", "edit", "share" ] },
+  { name = "*.ejs", use = [ "open", "edit", "share" ] },
+
+  ## Documents
+  { name = "*.pdf", use = "open" },
+  { name = "*.docx", use = "open" },
+  { name = "*.xls", use = "open" },
+  { name = "*.doc", use = "open" },
+
+  ## Misc
+	{ mime = "text/*", use = [ "edit", "share" ] },
+	{ mime = "video/*", use = "open" },
+  
+  ## Audio 
+  { name = "*.mp3", use = "play" },
+  { name = "*.ogg", use = "play" }, 
+  { name = "*.wav", use = "play" },
+  { name = "*.m4a", use = "play" },
+
+  ## Images
+  { name = "*.png", use = [ "show", "open" ] },
+  { name = "*.jpeg", use = [ "show", "open"] },
+  { name = "*.jpg", use = [ "show", "open" ] },
+  { name = "*.webp", use = [ "show", "open"] },
+  { name = "*.gif", use = [ "show", "open"] }, 
+]
