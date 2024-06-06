@@ -16,7 +16,7 @@ pkg update && pkg upgrade && pkg install zsh git which fzf && sh -c "$(curl -fsS
 
 Third, Run this command to install the config:
 ```
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting &&  pkg install neofetch neovim && git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && git clone https://github.com/abdlmutii/dotfiles.git && cd dotfiles && cp -r .termux/* ~/.termux && cp -r .config/* ~/.config && cp -r ~/.config/nvim/custom ~/.config/nvim/lua/ && rm -rf ~/.config/nvim/custom && mv backgrounds ~/backgrounds && mv .zshrc ~/.zshrc && mv .p10k.zsh ~/.p10k.zsh && cd .. && rm -rf dotfiles && cd .. && cd usr && cd etc && echo "" > motd && cd ~ && pkg install termux-api nodejs exa jq golang man && npm i localtunnel && exit
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting && git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions && pkg install neofetch neovim yazi glow && git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && git clone https://github.com/abdlmutii/dotfiles.git && cd dotfiles && cp -r .termux/* ~/.termux && cp -r .config/* ~/.config && cp -r ~/.config/nvim/custom ~/.config/nvim/lua/ && rm -rf ~/.config/nvim/custom && mv ~/.config/nvim/template ~/.config/nvim/lua/template && mv backgrounds ~/backgrounds && mv .zshrc ~/.zshrc && mv .p10k.zsh ~/.p10k.zsh && cd .. && rm -rf dotfiles && cd .. && cd usr && cd etc && echo "" > motd && cd ~ && pkg install termux-api nodejs eza jq golang miller ripgrep fd && exit
 ```
 
 ## NeoVim Setup
@@ -36,7 +36,7 @@ Third, Install these lsps:
 ```
 
 # Discord presence
-Termux doesn't allow to have discord rich presences.
+Termux doesn't support discord rich presences. and it'll take much resources so i dropped it completely ( although i can do it )
 
 # Congratulations 
 You've installed the config.
