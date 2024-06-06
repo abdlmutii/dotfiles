@@ -1,0 +1,11 @@
+{
+  "accentColor": "",
+  "cssTheme": "AnuPpuccin",
+  "enabledCssSnippets": [
+    "custom-rainbow-colors",
+    "hide-scrollbar"
+  ],
+  "textFontFamily": "",
+  "interfaceFontFamily": "Inter",
+  "monospaceFontFamily": "Courier New"
+}
