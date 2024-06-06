@@ -35,7 +35,7 @@ Third, Install these lsps:
 :MasonInstall emmet_ls prettierd golines goimports gopls beautysh fixjson stylua write_good shellcheck eslint
 ```
 
-# Yazi ( File manager )
+# Yazi
 **[Yazi](https://yazi-rs.github.io)** is a file manager, an awesome one. i added stuff on it
 ### Plugins
 - [miller.yazi](https://github.com/Reledia/miller.yazi), adds a .csv preview make sure to run this command to use this: `pkg i miller`
@@ -49,9 +49,9 @@ Third, Install these lsps:
 I've edited catppuccin theme a bit so file colors are actually matching their icon color, the default one is horrible to be honest you should use mine if you love catppuccin mocha
 
 # Se1f
->**What's se1f**: se1f is a tool to share code with buddies from your terminal directly, also share images, videos ( soon )
->**How to use se1f**: YOU NEED TO HOST [SE1F](https://github.com/abdlmutii/se1f) LOCALLY FIRST, run the command `se1f [file] | jq -r ".url" | xargs xdg-open`
->**How to host se1f**: run a [serveo](serveo.net) server with the go file running on localhost, and simply share your spaghetti trash with your buddies
+- **What's se1f**: se1f is a tool to share code with buddies from your terminal directly, also share images, videos ( soon )
+- **How to use se1f**: YOU NEED TO HOST [SE1F](https://github.com/abdlmutii/se1f) LOCALLY FIRST, run the command `se1f [file] | jq -r ".url" | xargs xdg-open`
+- **How to host se1f**: run a [serveo](serveo.net) server with the go file running on localhost, don't forget to edit `.zshrc` to contain your serveo api instead of the fallback one ( it won't work lol )
 
 # Obsidian
 soon ( i wanna sleep )
