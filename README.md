@@ -27,12 +27,17 @@ nvim
 
 Second, Install these TreeSitter addons:
 ```
-:TSInstall go dot bash html css embedded-template gomod gosum lua markdown pug javascript typescript tsx
+:TSInstall go cpp java javascript gomod gosum typescript css vue json yaml makrdown pug styled python kotlin
 ```
 
 Third, Install these lsps:
 ```
-:MasonInstall emmet_ls prettierd golines goimports gopls beautysh fixjson stylua write_good shellcheck eslint
+:MasonInstall emmet-ls prettierd golines goimports gopls fixjson stylua write-good shellcheck eslint-lsp
+```
+
+Fourth? i lost the count, do `:q!` and copy this to your shell:
+```sh
+npm install -g typescript-language-server
 ```
 
 # Yazi
