@@ -53,9 +53,9 @@ npm install -g typescript-language-server
 ### Flavor
 I've edited catppuccin theme a bit so file colors are actually matching their icon color, the default one is horrible to be honest you should use mine if you love catppuccin mocha
 
-# Se1f
-- **What's se1f**: se1f is a tool to share code with buddies from your terminal directly, also share images, videos ( soon )
-- **How to use se1f**: YOU NEED TO HOST [SE1F](https://github.com/abdlmutii/se1f) LOCALLY FIRST, run the command `se1f [file] | jq -r ".url" | xargs xdg-open`
+# Bin
+- **What's bin**: bin is a tool to share code with buddies from your terminal directly, also share images, videos ( soon )
+- **How to use bin**: YOU NEED TO HOST [SE1F](https://github.com/abdlmutii/se1f) LOCALLY FIRST, run the command `se1f [file] | jq -r ".url" | xargs xdg-open`
 - **How to host se1f**: run a [serveo](serveo.net) server with the go file running on localhost, don't forget to edit `.zshrc` to contain your serveo api instead of the fallback one ( it won't work lol )
 
 # Obsidian
